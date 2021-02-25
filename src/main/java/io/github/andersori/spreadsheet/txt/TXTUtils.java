@@ -22,7 +22,8 @@ public class TXTUtils {
                     new BufferedReader(new InputStreamReader(input, charset))
                         .lines()
                         .map(line -> line.replace(oldCharacter, newCharacter))
-                        //                        .peek(csv -> System.out.println(csv.toString()))
+                        // TODO: ocultar este peek
+                        .peek(csv -> System.out.println(csv.toString()))
                         .reduce(
                             "",
                             (a, b) -> {
